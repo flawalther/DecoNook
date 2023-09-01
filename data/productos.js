@@ -4,7 +4,8 @@ let productos = [
     nombre: "Lámpara de mesa",
     precio: 39.99,
     categoria: "Iluminación",
-    imagen: "https://ejemplo.com/imagen1.jpg",
+    imagen:
+      "https://casika.es/51219-large_default/lampara-de-mesa-arabia-ratan.jpg",
     descripcion:
       "Lámpara de mesa moderna con base de metal y pantalla de tela.",
     stock: 15,
@@ -14,7 +15,8 @@ let productos = [
     nombre: "Cojín decorativo",
     precio: 19.99,
     categoria: "Decoración",
-    imagen: "https://ejemplo.com/imagen2.jpg",
+    imagen:
+      "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202110/19/00169950101357____6__640x640.jpg",
     descripcion: "Cojín decorativo con estampado floral y relleno de plumas.",
     stock: 8,
   },
@@ -23,7 +25,8 @@ let productos = [
     nombre: "Mesa de centro",
     precio: 149.99,
     categoria: "Muebles",
-    imagen: "https://ejemplo.com/imagen3.jpg",
+    imagen:
+      "https://cdn.sklum.com/es/wk/2206588/mesa-de-centro-en-madera-de-acacia-vacry.jpg?cf-resize=gallery",
     descripcion: "Mesa de centro de madera maciza con acabado en barniz.",
     stock: 3,
   },
@@ -32,7 +35,8 @@ let productos = [
     nombre: "Cortinas opacas",
     precio: 29.99,
     categoria: "Textiles",
-    imagen: "https://ejemplo.com/imagen4.jpg",
+    imagen:
+      "https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/8719883720067_1.jpg",
     descripcion:
       "Cortinas opacas de alta calidad para bloquear la luz exterior.",
     stock: 12,
@@ -42,7 +46,8 @@ let productos = [
     nombre: "Espejo de pared",
     precio: 79.99,
     categoria: "Espejos",
-    imagen: "https://ejemplo.com/imagen5.jpg",
+    imagen:
+      "https://c.media.kavehome.com/images/Products/SN006M47_1V01.jpg?tx=w_900,c_fill,ar_0.8,g_auto",
     descripcion: "Espejo de pared con marco de metal dorado envejecido.",
     stock: 5,
   },
@@ -51,7 +56,8 @@ let productos = [
     nombre: "Juego de sábanas",
     precio: 49.99,
     categoria: "Textiles",
-    imagen: "https://ejemplo.com/imagen6.jpg",
+    imagen:
+      "https://katarinahome.com/wp-content/uploads/2023/03/Juego-de-Sabanas-Beige-Boho-Burrito-Blanco.jpg",
     descripcion: "Juego de sábanas de algodón suave y resistente.",
     stock: 20,
   },
