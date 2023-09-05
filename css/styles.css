@@ -1,0 +1,118 @@
+/* nav */
+nav{
+  background-color: #93B1A6;
+  color: #040D12;
+}
+#carousel {
+  position: relative;
+}
+
+ .carousel-item img {
+  height: 50vh;
+  filter: grayscale(60%);
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1;
+}
+/* card */
+card {
+  width: 80%;
+  height: 80px
+  
+}
+.card-img-top {
+  max-width: 100%; /* Adjust this value as needed */
+  max-height: 200px; /* Adjust this value as needed */
+  height: auto; /* This ensures the aspect ratio is maintained */
+  object-fit: cover;
+}
+.card-body{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.205);
+  color: white;
+  z-index: 1;
+
+}
+.card-body p {
+  font-size: 60px;
+  border-color: transparent;
+  text-align: center
+}
+/* buscardor */
+.container-search{
+  padding: 10px;
+  text-align: center;
+  left: 45%;
+}
+input{
+  outline: none;
+  box-sizing: border-box;
+ color: #040D12;
+ border-radius: 40px;
+ font-size: 20px; 
+ border-color: transparent;
+}
+::placeholder{
+  text-align: center;
+}
+.search-btn{
+  top: 0%;
+  right: 0%;
+  width: 30px;
+  height: 30px;
+  background-color:#183D3D ;
+  border-radius: 50px;
+  text-align: center;
+  border-color: transparent;
+}
+.card-body-desctacados{
+  font-size: 30px;
+  color: black ;
+}
+.card-img-top-destacados{
+  max-width: 100%; /* Adjust this value as needed */
+  max-height:px; /* Adjust this value as needed */
+  height: auto; /* This ensures the aspect ratio is maintained */
+  object-fit: cover;
+}
+/* footer */
+.footer {
+    background-color:  #93B1A6;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer h4 {
+    color: #fff;
+  }
+  
+  .footer p {
+    font-size: 14px;
+  }
+  
+  .social-icons {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+  }
