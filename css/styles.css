@@ -1,0 +1,29 @@
+
+  /* --------------------- */
+  /* Admin */
+*{
+    box-sizing:content-box;
+    border: 0;
+    padding: 0;
+}
+
+.mainAdm {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #040D12;
+    color: #93B1A6;
+    height: 100vh;
+    width: 100vw;
+}
+
+.articulosAdm{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.articulosAdm table{
+    color: #93B1A6;
+}
+
+

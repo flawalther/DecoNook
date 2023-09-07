@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body class="bodyAdm">
+    <header>
+        <h1>NAV</h1>
+    </header>
+
+    <main class="mainAdm">
+        <div class="row w-100">
+            <div class="col mx-5 my-5">
+                <h4>Bienvenido Administrador</h4>
+            </div> 
+        </div>
+        <div class="row w-100">
+            <div class="col">
+                <button onclick="nuevoProducto()">nuevo articulo</button>
+                    <!-- buscador-- -->
+
+                    <!-- boton nuevo producto -->
+            </div>
+        </div>
+        <div class="row w-100 articulosAdm">
+            <div class="col mx-5">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                          <th scope="col">Codigo</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col">Categoria</th>
+                          <th scope="col">Stock</th>
+                          <th>Eliminar</th>
+                          <th>Modificar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaAdm" >
+                        <!-- carga de filas -->
+                        <!-- botones modificar y borrar -->
+                    </tbody>
+                  </table>
+            </div>
+    
+        </div>
+        <div class="row w-100">
+            <div class="col">
+                <button>paginacion</button>
+                <!-- paginacion -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="productoModalLabel">PRODUCTO</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="mb-3">
+                        <label for="inputcodigo" class="form-label">Código</label>
+                        <input type="text" class="form-control" id="inputcodigo" required/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputnombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="inputnombre" required/>
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="inputprecio" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="inputprecio" required/>
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="inputcategoria" class="form-label">Categoría</label>
+                        <input type="text" class="form-control" id="inputcategoria" required/>
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="inputimagen" class="form-label">Imagen</label>
+                        <input type="text" class="form-control" id="inputimagen" required/>
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="inputdescripcion" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="inputdescripcion" rows="3" required></textarea>
+                    </div>                    
+                    <div class="mb-3">
+                        <label for="inputstock" class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="inputstock" required/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="../js/admin.js" type="module"></script>
+</body>
+</html>
