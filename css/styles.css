@@ -8,7 +8,6 @@
 }
 
 .mainAdm {
-    display: flex;
     flex-wrap: wrap;
     background-color: #040D12;
     color: #93B1A6;
@@ -18,12 +17,26 @@
 
 .articulosAdm{
     display: flex;
-    justify-content: center;
+    justify-content: center; 
   
 }
 
-.articulosAdm table{
+.articulosAdm table th{
     color: #93B1A6;
+}
+
+.articulosAdm table tr{
+    color: white;
+}
+
+.botonesAdm{
+    display: flex;
+    justify-content: end;
+}
+
+.botonesAdm button{
+    background-color: #93B1A6;
+    color: black;
 }
 
 

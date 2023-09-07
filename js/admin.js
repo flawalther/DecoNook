@@ -1,11 +1,10 @@
 
-import { productos, Producto} from "../data/productos.js";
-
+import { productos, Producto } from "../data/productos.js";
 
 localStorage.setItem("productos", JSON.stringify(productos));
-// const productos = JSON.parse(localStorage.getItem("productos")) || [];
 
 let tabla = document.querySelector("#tablaAdm");
+
 const myModal = new bootstrap.Modal(document.getElementById('productoModal'));
 
 const cargarTabla = () => {
@@ -14,16 +13,15 @@ const cargarTabla = () => {
          let fila = document.createElement("tr");
          let celdas = `<td>${producto.codigo}</td><td>${producto.nombre}</td><td>${producto.precio}</td>
          <td>${producto.categoria}</td><td>${producto.stock}</td>
-         <td><button class="btn btn-danger btn-sm mx-1" onclick="borrarProducto(${index})">X</button>
-         </td><td><button class="btn btn-warning btn-sm px-1" onclick="modificarProducto(${index})">M</button></td>`;
+         <td><button class="btn btn-danger btn-sm mx-1" onclick="borrarProducto(${index})">X</button></td>
+         <td><button class="btn btn-warning btn-sm px-1" onclick="modificarProducto(${index})">M</button></td>`;
          fila.innerHTML = celdas;
          tabla.append(fila);
     });
 };
 cargarTabla();
 
-
-const nuevoProducto = ()=>{
+const nuevoProducto = () => {
     myModal.show();
     
     let cod = document.querySelector("#inputcodigo").value;
@@ -51,7 +49,6 @@ const modificarProducto = (index)=>{
     document.querySelector("#inputdescripcion").value = productos[index].descripcion;
     document.querySelector("#inputstock").value = productos[index].stock;
     myModal.show();
-
 };
 
 const borrarProducto =(index)=>{
@@ -62,6 +59,5 @@ const borrarProducto =(index)=>{
         cargarTabla();
     }
 };
-
 
 
