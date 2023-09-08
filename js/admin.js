@@ -1,11 +1,23 @@
-
 import { productos, Producto } from "../data/productos.js";
 
+
+
 localStorage.setItem("productos", JSON.stringify(productos));
+
 
 let tabla = document.querySelector("#tablaAdm");
 
 const myModal = new bootstrap.Modal(document.getElementById('productoModal'));
+
+const mostrarModal = ()=>{
+        document.querySelector("form").reset();
+        myModal.show();
+}
+
+const botonAgregarProducto = document.getElementById("nuevoProducto");
+
+botonAgregarProducto.addEventListener("click", mostrarModal);
+
 
 const cargarTabla = () => {
     tabla.innerHTML="";
@@ -18,11 +30,12 @@ const cargarTabla = () => {
          fila.innerHTML = celdas;
          tabla.append(fila);
     });
+    
 };
 cargarTabla();
 
-const nuevoProducto = () => {
-    myModal.show();
+window.guardarProducto = (event) => {
+    event.preventDefault();
     
     let cod = document.querySelector("#inputcodigo").value;
     let nom = document.querySelector("#inputnombre").value;
@@ -33,14 +46,13 @@ const nuevoProducto = () => {
     let stoc = document.querySelector("#inputstock").value;
 
     let nuevoprod = new Producto (cod, nom, prec, categ, imag, descrip, stoc);
-
     productos.push(nuevoprod);
     localStorage.setItem("productos",JSON.stringify(productos));
 
     cargarTabla();
 };
 
-const modificarProducto = (index)=>{
+window.modificarProducto = (index)=>{
     document.querySelector("#inputcodigo").value = productos[index].codigo;
     document.querySelector("#inputnombre").value = productos[index].nombre;
     document.querySelector("#inputprecio").value = productos[index].precio;
@@ -49,9 +61,10 @@ const modificarProducto = (index)=>{
     document.querySelector("#inputdescripcion").value = productos[index].descripcion;
     document.querySelector("#inputstock").value = productos[index].stock;
     myModal.show();
+    
 };
 
-const borrarProducto =(index)=>{
+window.borrarProducto =(index)=>{
     let confirmacion = confirm (`Desea borrar el producto ${productos[index].nombre}?`);
     if (confirmacion){
         productos.slice(index,1);

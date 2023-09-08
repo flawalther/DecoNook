@@ -20,12 +20,12 @@
         </div>
         <div class="row">
             <div class="col-11 botonesAdm me-5 my-4 ">
-                <button type="button" class="btn" onclick="nuevoProducto()">Nuevo Producto</button>
+                <button type="button" class="btn" id="nuevoProducto">Nuevo Producto</button>
             </div>
         </div>
         <div class="row articulosAdm">
-            <div class="col-10">
-                <table class="table table-bordered table-responsive-sm">
+            <div class="col-10 table-responsive">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                           <th scope="col">Codigo</th>
@@ -60,45 +60,38 @@
     <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header modalHeaderAdm">
             <h1 class="modal-title fs-5" id="productoModalLabel">PRODUCTO</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form onsubmit="">
-                    <div class="mb-3">
-                        <label for="inputcodigo" class="form-label">Código</label>
-                        <input type="text" class="form-control" id="inputcodigo" required/>
+            <div class="modal-body modalBodyAdm">
+                <form onsubmit="guardarProducto(event)" class="row g-3">
+                    <div class=" col-md-4">
+                        <input type="text" class="form-control" id="inputcodigo" placeholder="Código" required/>
                     </div>
-                    <div class="mb-3">
-                        <label for="inputnombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="inputnombre" required/>
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" id="inputprecio" placeholder="Precio" required/>
+                    </div>               
+                    <div class="col-md-4">
+                        <input type="number" class="form-control" id="inputstock" placeholder="Stock" required/>
+                    </div>     
+                    <div class="col-mb-3">
+                        <input type="text" class="form-control" id="inputnombre" placeholder="Nombre del producto" required/>
                     </div>                    
-                    <div class="mb-3">
-                        <label for="inputprecio" class="form-label">Precio</label>
-                        <input type="number" class="form-control" id="inputprecio" required/>
+                    <div class="col-mb-3">
+                        <input type="text" class="form-control" id="inputcategoria" placeholder="Categoría" required/>
                     </div>                    
-                    <div class="mb-3">
-                        <label for="inputcategoria" class="form-label">Categoría</label>
-                        <input type="text" class="form-control" id="inputcategoria" required/>
+                    <div class="col-mb-3">
+                        <input type="url" class="form-control" id="inputimagen" placeholder="URL de imagen" required/>
                     </div>                    
-                    <div class="mb-3">
-                        <label for="inputimagen" class="form-label">Imagen</label>
-                        <input type="text" class="form-control" id="inputimagen" required/>
+                    <div class="col-mb-3">
+                        <textarea class="form-control" id="inputdescripcion" rows="3" placeholder="Descripción" required></textarea>
                     </div>                    
-                    <div class="mb-3">
-                        <label for="inputdescripcion" class="form-label">Descripción</label>
-                        <textarea class="form-control" id="inputdescripcion" rows="3" required></textarea>
-                    </div>                    
-                    <div class="mb-3">
-                        <label for="inputstock" class="form-label">Stock</label>
-                        <input type="number" class="form-control" id="inputstock" required/>
+
+                    <div class="mb-3 d-flex justify-content-end">
+                        <button type="submit" class="btn">Guardar</button>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-primary">Guardar</button>
             </div>
         </div>
         </div>

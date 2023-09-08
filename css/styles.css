@@ -18,7 +18,6 @@
 .articulosAdm{
     display: flex;
     justify-content: center; 
-  
 }
 
 .articulosAdm table th{
@@ -36,7 +35,27 @@
 
 .botonesAdm button{
     background-color: #93B1A6;
-    color: black;
+    color: ##040D12;
 }
 
+.modalBodyAdm{
+    background-color: #93B1A6;
+}
 
+.modalBodyAdm button{
+    background-color: #040D12;
+    color: white;
+}
+
+.modalHeaderAdm{
+    background-color: #040D12;
+    color: white;
+}
+
+.modalHeaderAdm h1{
+    color: white;
+}
+
+.modalHeaderAdm button{
+    background-color: #93B1A6;
+}
