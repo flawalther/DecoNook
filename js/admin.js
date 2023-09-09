@@ -55,15 +55,14 @@ window.guardarProducto = (event) => {
 
 window.modificarProducto = (event)=>{
     event.preventDefault();
-    
-    productos[posicion].codigo = document.getElementById("#inputcodigo2").value;
-    productos[posicion].nombre = document.getElementById("#inputnombre2").value;
-    productos[posicion].precio = document.getElementById("#inputprecio2").value;
-    productos[posicion].categoria = document.getElementById("#inputcategoria2").value;
-    productos[posicion].imagen = document.getElementById("#inputimagen2").value;
-    productos[posicion].descripcion = document.getElementById("#inputdescripcion2").value;
-    productos[posicion].stock = document.getElementById("#inputstock2").value;
-// console.log(posicion)
+
+    productos[posicion].codigo = document.querySelector("#inputcodigo2").value;
+    productos[posicion].nombre = document.querySelector("#inputnombre2").value;
+    productos[posicion].precio = document.querySelector("#inputprecio2").value;
+    productos[posicion].categoria = document.querySelector("#inputcategoria2").value;
+    productos[posicion].imagen = document.querySelector("#inputimagen2").value;
+    productos[posicion].descripcion = document.querySelector("#inputdescripcion2").value;
+    productos[posicion].stock = document.querySelector("#inputstock2").value;
 
     localStorage.setItem("productos",JSON.stringify(productos));
 
@@ -92,7 +91,7 @@ window.mostrarProducto = (index) =>{
 window.borrarProducto =(index)=>{
     let confirmacion = confirm (`Desea borrar el producto ${productos[index].nombre}?`);
     if (confirmacion){
-        productos.slice(index,1);
+        productos.splice(index,1);
         localStorage.setItem("productos", JSON.stringify(productos));
         cargarTabla();
     }
