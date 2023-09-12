@@ -1,4 +1,3 @@
-
   /* --------------------- */
   /* Admin */
 *{
@@ -8,16 +7,8 @@
 }
 
 .mainAdm {
-    flex-wrap: wrap;
     background-color: #040D12;
     color: #93B1A6;
-    /* height: 100vh; */
-    width: 100vw;
-}
-
-.articulosAdm{
-    display: flex;
-    justify-content: center; 
 }
 
 .articulosAdm table th{
@@ -26,11 +17,6 @@
 
 .articulosAdm table tr{
     color: white;
-}
-
-.botonesAdm{
-    display: flex;
-    justify-content: end;
 }
 
 .botonesAdm button{
@@ -59,3 +45,5 @@
 .modalHeaderAdm button{
     background-color: #93B1A6;
 }
+
+/* fin Admin---  */

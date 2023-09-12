@@ -13,7 +13,6 @@ const mostrarModal = ()=>{
 }
 
 const botonAgregarProducto = document.getElementById("nuevoProducto");
-
 botonAgregarProducto.addEventListener("click", mostrarModal);
 
 
@@ -28,7 +27,6 @@ const cargarTabla = () => {
          fila.innerHTML = celdas;
          tabla.append(fila);
     });
-    
 };
 cargarTabla();
 
@@ -50,7 +48,6 @@ window.guardarProducto = (event) => {
     cargarTabla();
 
     myModal.hide();
-
 };
 
 window.modificarProducto = (event)=>{
@@ -69,7 +66,6 @@ window.modificarProducto = (event)=>{
     myModal2.hide();
 
     cargarTabla();
-
 };
 
 let posicion = null;
